@@ -1,0 +1,35 @@
+<h1>Articles</h1>
+
+{{!-- <ul>
+{{#each articles}}
+<li><strong>Article Title :</strong> {{this.title}}</li>
+<p>Article Url :<a href='{{this.url}}'>{{this.url}}</a></p>
+<p>Article description : {{this.description}}</p>
+
+{{/each}}
+</ul>
+
+
+<a style="text-decoration:none" href="/articles/form"><button type="submit">Add a New Article</a> --}}
+
+<ol>
+	    {{#each tenArticles}}
+	    <li>
+        <ul>
+            <li><strong>Title:</strong> {{this.title}}</li>
+	            <p><strong>URL:</strong> <a href={{this.url}} target="_blank">{{this.url}}</a></p>
+	            {{#if this.description}}
+	            <p><strong>Description:</strong> {{this.description}}</p>
+	            {{/if}}
+	        </ul>
+	    </li>
+	    {{/each}}
+	</ol>
+  <div>
+	<a style="text-decoration:none" href="/articles/form"><button type="submit">Add a New Article</a>
+  </div>
+	<ul>
+	    {{#each this.pages}}
+	    <a href="articles?page={{this}}">{{this}}</a>
+      	    {{/each}}
+	</ul>

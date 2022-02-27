@@ -1,0 +1,39 @@
+
+<header>
+  <link src="public/stylesheets/style.css" >
+</header>
+<h1>Add An Article</h1>
+
+<div>
+<ul style="list-style: none;">
+{{#each newArticle.errors}}
+<li style="color:red">{{this}}</li>
+{{/each}}
+</ul>
+</div>
+
+<form  action="/articles" method="post">
+<ul style="list-style: none;" >
+<li>
+  <label for="title">Article Title:</label>
+  <input type="text" id="title" name="title">
+</li>
+<li>
+  <label for="url">Article URL:</label>
+  <input type="text" id="url" name="url">
+</li>
+<li>
+  <label for="description">Article Description:</label>
+  <input type="text" id="description" name="description">
+  </li>
+<li>
+  <input type="submit">
+</li>
+</ul>
+</form>
+
+<div calss ="links">
+<a href="/articles/form">Form</a>
+<a href="/articles">Home</a>
+</div>
+</div>
